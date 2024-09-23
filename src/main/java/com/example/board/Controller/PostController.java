@@ -3,6 +3,8 @@ package com.example.board.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.ui.Model;
+
+import com.example.board.domain.Post;
 import com.example.board.service.PostService;
 
 public class PostController {
@@ -35,10 +37,16 @@ public class PostController {
                      return "posts/list";
                  }
 
-                 
+
                   @GetMapping("/{id}")
                 public String getPostById(@PathVariable Long id, Model model) {
                     model.addAttribute("post", postService.getPostById(id));
                      return "posts/detail";
                  }
+
+                 @GetMapping("/new")
+                public String createPostForm(Model model) {
+                 model.addAttribute("post", new Post());
+                 return "posts/new";
+              }                
 }
