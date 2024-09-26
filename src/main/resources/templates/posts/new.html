@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>새 게시글 작성</title>
+    <title>게시글 작성</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>새 게시글 작성</h1> 
-    <!-- th:field: post 객체의 필드와 폼 요소를 연결
-         th:action: 폼 제출 시 post 요청을 /posts로 보냄 -->
-    <form action="#" th:action="@{/posts}" th:object="${post}" method="post">
-        <label>제목: <input type="text" th:field="*{title}" /></label><br />
-        <label>내용: <textarea th:field="*{content}"></textarea></label><br />
-        <label>작성자: <input type="text" th:field="*{author}" /></label><br />
-        <button type="submit">저장</button>
-    </form>
+    <div class="container">
+        <h1>새 게시글 작성</h1>
+        <form action="/posts" method="post" th:object="${post}">
+            <input type="text" th:field="*{title}" placeholder="제목" required />
+            <textarea th:field="*{content}" placeholder="내용" rows="10" required></textarea>
+            <input type="submit" class="new-post-button" value="저장하기" />
+        </form>
+    </div>
 </body>
 </html>

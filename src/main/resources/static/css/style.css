@@ -26,3 +26,35 @@ h1 {
     list-style-type: none;
     padding: 0;
 }
+.post-list li {
+    padding: 15px;
+    border-bottom: 1px solid #eeeeee; /* 게시글 사이 구분 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-list li:hover {
+    background-color: #ffeb00; /* 강조 색상 (노란색) */
+}
+
+.post-title {
+    font-size: 1.2em;
+    color: #333333;
+}
+
+.post-date {
+    font-size: 0.8em;
+    color: #666666;
+}
+
+.new-post-button {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #333333; /* 버튼 기본 색상 (검정) */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+}
