@@ -1,0 +1,28 @@
+body {
+    background-color: #F7E600;
+    font-family: 'Noto Sans', 'Apple SD Gothic Neo', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333333; 
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff; /* 카드 배경색 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+    border-radius: 8px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333333; /* 기본 제목 색 */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.post-list {
+    list-style-type: none;
+    padding: 0;
+}
